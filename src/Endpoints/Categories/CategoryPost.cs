@@ -12,7 +12,11 @@ public class CategoryPost
     {
         var category = new Category
         {
-            Name = categoryRequest.Name
+            Name = categoryRequest.Name,
+            CreatedBy = "Teste",
+            CreatedOn = DateTime.Now,
+            EditedBy = "Teste",
+            EditedOn = DateTime.Now,
         };
         context.Categories.Add(category);
         context.SaveChanges();
