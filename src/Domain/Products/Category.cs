@@ -10,8 +10,8 @@ public class Category : Entity
     {
         var contract = new Contract<Category>()
             .IsNotNullOrEmpty(name, "Name", "Nome é obrigatório")
-            .IsNotNullOrEmpty(createdBy, "CreatedBy", "Nome é obrigatório")
-            .IsNotNullOrEmpty(editedBy, "EditedBy", "Nome é obrigatório");
+            .IsNotNullOrEmpty(createdBy, "CreatedBy", "CreateBy é obrigatório")
+            .IsNotNullOrEmpty(editedBy, "EditedBy", "EditedBy é obrigatório");
         AddNotifications(contract);
 
         Name = name;
